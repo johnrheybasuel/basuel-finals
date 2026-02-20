@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div id="maincontent">
+
+        <div id="header">
+            <img src="picture.jpg" alt="Profile">
+            <h1> Basuel Website </h1>
+        </div>
+
+
+        <div id="navigation">
+            <div><a href="index.html">Home</a></div>
+            <div><a href="register.html">Register</a></div>
+            <div><a href="login.html">Log In</a></div>
+            <div><a href="aboutus.html">About Us</a></div>
+            <div><a href="contact.html">Contact</a></div>
+            <div><a href="help.html">Help</a></div>
+            <div><a href="http://www.google.com/">Exit</a></div>
+        </div>
+
+
+        <div id="content">
+
+            <div id="register-container">
+                <div id="output-box">
+                    <h2>Registered Info</h2>
+                    <p><strong>First Name:</strong> <span id="outFirst"></span></p>
+                    <p><strong>Middle Name:</strong> <span id="outMiddle"></span></p>
+                    <p><strong>Last Name:</strong> <span id="outLast"></span></p>
+                    <p><strong>Age:</strong> <span id="outAge"></span></p>
+                    <p><strong>Gmail:</strong> <span id="outGmail"></span></p>
+                </div>
+
+                <div id="register-box">
+                    <h2>Register</h2>
+                    <input id="firstname" placeholder="First Name">
+                    <input id="middle" placeholder="Middle Name">
+                    <input id="lastname" placeholder="Last Name">
+                    <input id="age" placeholder="Age" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                    <input id="gmail" placeholder="Gmail Account">
+                    <button id="registerBtn">Register</button>
+                    <a href="index.html">Back To Home</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+
+            <div id="footer_content">
+                <div> <a href="http://www.facebook.com/">Facebook</a></div>
+                <div> <a href="http://www.instagram.com/">Instagram</a></div>
+                <div> <a href="http://www.tiktok.com/">Tiktok</a></div>
+                <div> <a href="http://www.gmail.com/">Gmail</a></div>
+            </div>
+
+
+            <div id="foot">
+                <h3>Thank you for visiting</h3>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="register.js"></script>
+
+</body>
+
+</html>

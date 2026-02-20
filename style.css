@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+#maincontent {
+    background-image: url("backgroundallfiles.jpg"); 
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat; 
+    object-fit: cover;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header header" 
+    "navigation content content content" 
+    "navigation content content content" 
+    "footer footer footer footer";
+}
+
+
+/* ======== unang gagawin ========= */
+#header {
+    grid-area: header;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    color: black;
+    border: 1px solid rgba(177, 173, 173, 0.905);
+}
+
+#navigation {
+    grid-area: navigation;
+    text-align: center;
+    padding: 30px 10px;
+    border: 1px solid rgba(177, 173, 173, 0.905);
+}
+
+#content {
+    grid-area: content;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: cover;
+    border: 1px solid rgba(177, 173, 173, 0.905);
+}
+
+#footer {
+    grid-area: footer;
+    border: 1px solid rgba(177, 173, 173, 0.905);
+    color: black;
+}/* ==========tapos=========*/
+
+
+/* ========== css for header ========== */
+#header img {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid black;
+}
+
+#header h1 {
+    color:rgba(177, 173, 173, 0.905);
+    bottom: 100px;
+}
+
+/* ========== header css end ========== */
+
+
+
+/* ========== css for navigation ==========*/
+#navigation div {
+    margin: 25px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* link base */
+#navigation a {
+    display: block;
+    padding: 10px 0;
+    color:rgba(177, 173, 173, 0.905);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* animated background bar */
+#navigation div::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #444241;
+    transition: left 0.3s ease;
+}
+
+/* hover animation */
+#navigation div:hover::before {
+    left: 0;
+}
+
+#navigation div:hover a {
+    color: white;
+    transform: translateX(8px);
+}
+
+/* click effect */
+#navigation a:active {
+    transform: translateX(4px) scale(0.95);
+}/* ========== navigation css end ========== */
+
+
+/* ========== css for footer ========== */
+#footer_content {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 15px;
+}
+
+#footer_content a {
+    color:rgba(177, 173, 173, 0.905);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#footer_content a:hover {
+    text-decoration: underline;
+}
+
+#foot {
+    color:rgba(177, 173, 173, 0.905);
+    text-align: center;
+}/* ========== footer css end ========== */
+
+
+
+/* ========== Register ui ========== */
+#register-box {
+    background-color: white;
+    width: 380px;
+    padding: 35px 40px;
+    border-radius: 14px;
+    border: 6px solid rgb(92, 89, 89);
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    background-image: url("backgoroundpictext.jpg");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+
+#register-box h2 {
+    margin-bottom: 22px;
+    color:rgba(177, 173, 173, 0.905);
+    font-size: 24px;
+}
+
+#register-box input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #8b4513;
+    font-size: 15px;
+    outline: none;
+}
+
+#register-box input:focus {
+    border-color: rgb(12, 12, 12);
+    box-shadow: 0 0 10px rgba(215, 192, 192, 0.4);
+}
+
+#register-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 3px solid rgb(160, 157, 157);
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#register-box button:hover {
+    background-color: #433f3e;
+    transform: scale(1.04);
+}
+
+#register-box button:active {
+    transform: scale(0.96);
+}
+
+#register-box a {
+    color:rgba(177, 173, 173, 0.905);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#register-box a:hover {
+    color: rgb(203, 199, 199);
+    text-decoration: underline;
+}
+
+#register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-direction: row-reverse;
+}
+
+#output-box {
+    background-color: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 14px;
+    border: 6px solid rgb(92, 89, 89);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    background-image: url("backgoroundpictext.jpg");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+
+#output-box h2 {
+    color:rgba(177, 173, 173, 0.905);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#output-box p {
+    color:rgba(177, 173, 173, 0.905);
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+/* ===== Scrollable Registered Info ===== */
+#output-box {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+#output-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+#output-box::-webkit-scrollbar-thumb {
+    background-color: rgb(70, 68, 68);
+    border-radius: 5px;
+    background:  rgb(70, 68, 68);
+}
+
+#output-box::-webkit-scrollbar-track {
+    background-color: #888683;
+}/*==========end register info =============*/
+/* ========== Register ui end ========== */
+
+
+
+/* ========== Login in ui ========== */
+#login-box {
+    background-color: white;
+    width: 340px;
+    padding: 30px 35px;
+    border-radius: 12px;
+    border: 6px solid rgb(92, 89, 89);
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    background-image: url("backgoroundpictext.jpg"); /* PATH TO IMAGE */
+    background-size: cover;        /* FILL THE AREA */
+    background-position: center;   /* CENTER THE IMAGE */
+    background-repeat: no-repeat;  /* NO TILING */
+}
+
+#login-box h2 {
+    margin-bottom: 20px;
+    color:rgba(177, 173, 173, 0.905);
+}
+
+#login-box input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 2px solid #8b4513;
+    font-size: 15px;
+    outline: none;
+}
+
+#login-box input:focus {
+    border-color: brown;
+    box-shadow: 0 0 6px rgba(165, 42, 42, 0.4);
+}
+
+#login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 8px;
+    border: 3px solid rgb(160, 157, 157);
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#login-box button:hover {
+    background-color: #433f3e;
+    transform: scale(1.03);
+}
+
+#login-box button:active {
+    transform: scale(0.97);
+}
+
+#login-box a {
+    color:rgba(177, 173, 173, 0.905);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#login-box a:hover {
+    color: rgb(203, 199, 199);
+    text-decoration: underline;
+}
+
+/* ========== Login in ui end ========== */
+
+
+
+/* ========== HOME PAGE UI ========== */
+#home-box {
+    background-color: white;
+    padding: 45px 55px;
+    max-width: 650px;
+    border-radius: 18px;
+    border: 6px solid rgb(92, 89, 89);
+    text-align: center;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+    background-image: url("backgoroundpictext.jpg");
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#home-box h1 {
+    color: rgb(180, 163, 163);
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+#home-box .tagline {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(180, 163, 163);
+    margin-bottom: 20px;
+}
+
+#home-box p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: rgb(180, 163, 163);
+}/*===========end home page==========*/
+
+
+
+/* ========== about us ========== */
+#about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 750px;
+    width: 100%;
+}
+
+.about-card {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 30px 35px;
+    color: #e0d6d6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.about-card h1 {
+    margin-bottom: 10px;
+    color: #d6c7c7;
+}
+
+.about-card h2 {
+    margin-bottom: 8px;
+    color: #cdbcbc;
+}
+
+.about-card p {
+    line-height: 1.6;
+    font-size: 15.5px;
+}/* ========end of about us========== */
+
+/* ===== CONTACT ONLY UI ===== */
+#contact-only {
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    padding: 35px 45px;
+    border-radius: 16px;
+    border: 4px solid rgba(177,173,173,0.6);
+    color: rgba(177,173,173,0.95);
+    min-width: 320px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+#contact-only h2 {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.contact-item {
+    margin: 12px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item a {
+    color: rgba(177,173,173,0.95);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: white;
+} /* ============ css contact end ============ */
+
+/* ========== HELP PAGE UI ========== */
+
+#help-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 720px;
+    width: 100%;
+}
+
+/* glass card */
+.help-card {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 10px 34px;
+    color: #e0d6d6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.help-card h1 {
+    text-align: center;
+    margin-bottom: 6px;
+    color: #d6c7c7;
+}
+
+.help-sub {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #bfb3b3;
+}
+
+.help-card h2 {
+    margin-bottom: 6px;
+    color: #cdbcbc;
+}
+
+.help-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ========== END HELP UI ========== */
+
+
+
+
+.input-error {
+    border: 2px solid red !important;
+    box-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+}
+
