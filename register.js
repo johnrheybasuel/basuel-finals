@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             /* ================= QUEUE ENQUEUE ================= */
             users.push(user);  
             /* CLEAR INPUTS */
-            firstInput.value = "";
+            
             middleInput.value = "";
             lastInput.value = "";
             ageInput.value = "";
