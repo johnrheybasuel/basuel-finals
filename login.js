@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (submitBtn) {
         submitBtn.addEventListener("click", function () {
 
-            var email = document.getElementById("email").value.trim();
-            var password = document.getElementById("password").value.trim();
+            var email = document.getElementById("email").value();
+            var password = document.getElementById("password").value();
 
             if (email === "" && password === "") {
                 swal("Missing Information", "Username and Password are required", "warning");
