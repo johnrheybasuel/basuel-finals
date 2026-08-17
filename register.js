@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var ageInput = document.getElementById("age");
             var gmailInput = document.getElementById("gmail");
 
-            var first = firstInput.value.trim();
+            var first = firstInput.value();
             var middle = middleInput.value.trim();
             var last = lastInput.value.trim();
             var age = ageInput.value.trim();
